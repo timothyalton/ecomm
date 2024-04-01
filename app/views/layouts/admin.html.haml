@@ -30,4 +30,9 @@
     = javascript_importmap_tags
   %body
     %main.container.mx-auto.mt-28.px-5.flex
+      %nav.flex.w-full 
+        %div.w-64.p-4.h-screen.bg-gray-600.top-0
+          %div.flex
+            = image_tag 'logo-png', class: 'w-16'
+            %h1.text-md.py-2.text-gray-50.font-bold.hidden.md:block Ecomm Admin
       = yield
