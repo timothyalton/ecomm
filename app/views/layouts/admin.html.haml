@@ -29,10 +29,15 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
-    %main.container.mx-auto.mt-28.px-5.flex
+    %main.flex
       %nav.flex.w-full 
         %div.w-64.p-4.h-screen.bg-gray-600.top-0
           %div.flex
-            = image_tag 'logo-png', class: 'w-16'
+            = image_tag 'logo.png', class: 'w-16'
             %h1.text-md.py-2.text-gray-50.font-bold.hidden.md:block Ecomm Admin
+          %ul.flex.flex-col.text-gray-50
+            %li
+              = link_to admin_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do 
+                = icon('fa-solid', 'gauge-high')
+                %span.hidden.md:inline-block Dashboard
       = yield
